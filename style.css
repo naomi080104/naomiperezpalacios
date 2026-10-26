@@ -1,0 +1,113 @@
+/* =========================================================
+   PORTAFOLIO · Naomi Alonso
+   Paleta tomada de PORTAFOLIO_2026.pdf
+   ========================================================= */
+:root {
+  --rojo:        #A6231A;
+  --durazno:     #FDE3D5;
+  --crema:       #FDF2EB;
+  --azul-vichy:  #B6C9D3;
+  --rosa:        #FD9F93;
+
+  --fuente-titulo: "Abril Fatface", Georgia, serif;
+  --fuente-texto:  "Libre Baskerville", Georgia, serif;
+  --fuente-firma:  "Caveat", cursive;
+}
+
+/* ---------- Base ---------- */
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  font-family: var(--fuente-texto);
+  color: var(--rojo);
+  background-color: var(--crema);
+  line-height: 1.7;
+}
+h2 { font-weight: 400; }
+a { color: var(--rojo); }
+a:focus-visible, .navbar-toggler:focus-visible {
+  outline: 3px solid var(--rojo);
+  outline-offset: 3px;
+}
+
+/* ---------- Fondo de cuadros (vichy) ---------- */
+.vichy {
+  background-color: var(--crema);
+  background-image:
+    linear-gradient(90deg, rgba(182, 201, 211, .75) 50%, transparent 50%),
+    linear-gradient(rgba(182, 201, 211, .75) 50%, transparent 50%);
+  background-size: 48px 48px;
+}
+
+/* ---------- Menú ---------- */
+.barra-menu {
+  background-color: var(--durazno);
+  border-bottom: 3px dashed var(--rosa);
+}
+.logo-nav { height: 48px; width: auto; display: block; }
+.barra-menu .nav-link { color: var(--rojo); font-size: 1rem; padding-left: 1rem; padding-right: 1rem; }
+.barra-menu .nav-link:hover { text-decoration: underline wavy var(--rosa); text-underline-offset: 6px; }
+
+/* ---------- Imágenes a todo el ancho (header y sobre mí) ---------- */
+.img-ancha { display: block; width: 100%; height: auto; }
+
+/* ---------- Mis proyectos: platos ---------- */
+.seccion { padding: 5rem 0; }
+.plato {
+  display: block;
+  max-width: 300px;
+  margin: 0 auto;
+  transition: transform .2s ease;
+}
+.plato img { width: 100%; height: auto; display: block; }
+.plato:hover { transform: rotate(-4deg) scale(1.04); }
+
+/* ---------- Sobre mí ---------- */
+.seccion-sobre-mi { background-color: var(--durazno); }
+.video {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  background: #000;
+  border: 6px solid #fff;
+  box-shadow: 6px 6px 0 var(--rosa);
+}
+
+/* ---------- Contacto ---------- */
+.pie { padding: 4rem 0; }
+.pie .container {
+  background: var(--durazno);
+  max-width: 640px;
+  padding: 2.5rem 1.5rem;
+  border: 3px dashed var(--rosa);
+}
+.titulo-seccion {
+  font-family: var(--fuente-titulo);
+  font-size: clamp(2.2rem, 6vw, 3.8rem);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.firma { font-family: var(--fuente-firma); font-size: 2rem; font-weight: 500; margin: 0; }
+.enlace-pie { font-weight: 700; }
+
+/* ---------- Accesibilidad ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .plato { transition: none; }
+}
+
+/* ---------- Galerías ---------- */
+.galeria figure { margin: 0; }
+.galeria img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: var(--azul-vichy);
+  border: 6px solid #fff;
+  box-shadow: 4px 4px 0 var(--rosa);
+}
+.galeria figcaption {
+  margin-top: .8rem;
+  text-align: center;
+  font-size: .95rem;
+}
