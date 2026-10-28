@@ -43,7 +43,7 @@ a:focus-visible, .navbar-toggler:focus-visible {
   background-color: var(--durazno);
   border-bottom: 3px dashed var(--rosa);
 }
-.logo-nav { height: 48px; width: auto; display: block; }
+.logo-nav { height: 90px; width: auto; display: block; }
 .barra-menu .nav-link { color: var(--rojo); font-size: 1rem; padding-left: 1rem; padding-right: 1rem; }
 .barra-menu .nav-link:hover { text-decoration: underline wavy var(--rosa); text-underline-offset: 6px; }
 
